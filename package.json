@@ -1,0 +1,25 @@
+{
+  "name": "chatpulse",
+  "version": "0.1.0",
+  "description": "A browser extension for sending controlled, timed messages in live-stream chats.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "check": "node --check src/background.js && node --check src/content.js && node --check src/popup.js",
+    "icons": "powershell -ExecutionPolicy Bypass -File scripts/generate-icons.ps1",
+    "build:firefox": "powershell -ExecutionPolicy Bypass -File scripts/build-firefox.ps1",
+    "package:chrome": "powershell -ExecutionPolicy Bypass -File scripts/package-chrome.ps1",
+    "package:firefox": "powershell -ExecutionPolicy Bypass -File scripts/package-firefox.ps1"
+  },
+  "keywords": [
+    "browser-extension",
+    "chrome-extension",
+    "firefox-extension",
+    "livestream",
+    "chat",
+    "kick",
+    "twitch",
+    "youtube",
+    "tiktok"
+  ]
+}

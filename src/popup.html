@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatPulse</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup" aria-label="ChatPulse">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <h1>ChatPulse</h1>
+            <p id="platform" class="platform-status" data-i18n="platformDetecting">Detectando plataforma...</p>
+          </div>
+        </div>
+
+        <label class="switch" title="Ativar envio automatico">
+          <input id="enabled" type="checkbox">
+          <span class="switch-track"></span>
+        </label>
+      </header>
+
+      <div class="scroll-content">
+        <section class="panel">
+          <label class="field-label" for="uiLanguage" data-i18n="uiLanguage">Idioma da interface</label>
+          <select id="uiLanguage">
+            <option value="auto" data-i18n="autoLanguage">Automatico</option>
+            <option value="pt-BR">Portugues</option>
+            <option value="en">English</option>
+            <option value="es">Espanol</option>
+            <option value="fr">Francais</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="zh-CN">Chinese</option>
+          </select>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <span data-i18n="topic">Tema</span>
+            <span class="hint" data-i18n="closedChoices">escolhas seguras</span>
+          </div>
+          <div class="choice-grid theme-grid" role="radiogroup" aria-label="Tema">
+            <label class="choice-card"><input type="radio" name="theme" value="auto" data-topic=""><span><strong data-i18n="themeAuto">Auto</strong><small data-i18n="themeAutoHelp">varia sozinho</small></span></label>
+            <label class="choice-card"><input type="radio" name="theme" value="chat" data-topic="chat"><span><strong data-i18n="themeChat">Chat</strong><small data-i18n="themeChatHelp">comunidade</small></span></label>
+            <label class="choice-card"><input type="radio" name="theme" value="gameplay" data-topic="gameplay"><span><strong data-i18n="themeGameplay">Gameplay</strong><small data-i18n="themeGameplayHelp">jogadas</small></span></label>
+            <label class="choice-card"><input type="radio" name="theme" value="hype" data-topic="hype"><span><strong data-i18n="themeHype">Hype</strong><small data-i18n="themeHypeHelp">energia alta</small></span></label>
+            <label class="choice-card"><input type="radio" name="theme" value="food" data-topic="bacon"><span><strong data-i18n="themeFood">Food</strong><small data-i18n="themeFoodHelp">bacon mode</small></span></label>
+            <label class="choice-card"><input type="radio" name="theme" value="clutch" data-topic="clutch"><span><strong data-i18n="themeClutch">Clutch</strong><small data-i18n="themeClutchHelp">momentos tensos</small></span></label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <span data-i18n="interval">Intervalo</span>
+            <span class="hint" data-i18n="antiSpam">anti-spam</span>
+          </div>
+          <div class="choice-grid interval-grid" role="radiogroup" aria-label="Intervalo">
+            <label class="choice-card compact"><input type="radio" name="interval" value="low" data-min="4" data-max="7"><span><strong>4-7m</strong><small data-i18n="intervalLow">leve</small></span></label>
+            <label class="choice-card compact"><input type="radio" name="interval" value="balanced" data-min="2" data-max="4"><span><strong>2-4m</strong><small data-i18n="intervalBalanced">normal</small></span></label>
+            <label class="choice-card compact"><input type="radio" name="interval" value="active" data-min="1" data-max="2"><span><strong>1-2m</strong><small data-i18n="intervalActive">ativo</small></span></label>
+          </div>
+        </section>
+
+        <section class="panel">
+        <div class="panel-header">
+          <span data-i18n="messageLanguages">Idiomas das mensagens</span>
+          <span class="hint" data-i18n="pickAtLeastOne">min. 1</span>
+        </div>
+
+        <div class="language-grid" role="group" aria-label="Idiomas">
+          <label class="language-chip"><input type="checkbox" name="language" value="pt-BR"><span><i class="flag flag-br"></i><em>PT</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="en"><span><i class="flag flag-us"></i><em>EN</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="es"><span><i class="flag flag-es"></i><em>ES</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="fr"><span><i class="flag flag-fr"></i><em>FR</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="de"><span><i class="flag flag-de"></i><em>DE</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="it"><span><i class="flag flag-it"></i><em>IT</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="ja"><span><i class="flag flag-jp"></i><em>JA</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="ko"><span><i class="flag flag-kr"></i><em>KO</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="zh-CN"><span><i class="flag flag-cn"></i><em>ZH</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="ru"><span><i class="flag flag-ru"></i><em>RU</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="tr"><span><i class="flag flag-tr"></i><em>TR</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="id"><span><i class="flag flag-id"></i><em>ID</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="ar"><span><i class="flag flag-sa"></i><em>AR</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="hi"><span><i class="flag flag-in"></i><em>HI</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="nl"><span><i class="flag flag-nl"></i><em>NL</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="pl"><span><i class="flag flag-pl"></i><em>PL</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="sv"><span><i class="flag flag-se"></i><em>SV</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="vi"><span><i class="flag flag-vn"></i><em>VI</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="th"><span><i class="flag flag-th"></i><em>TH</em></span></label>
+          <label class="language-chip"><input type="checkbox" name="language" value="tl"><span><i class="flag flag-ph"></i><em>TL</em></span></label>
+        </div>
+        </section>
+
+        <section class="panel settings-panel">
+          <label class="option-row">
+            <span>
+              <strong data-i18n="translation">Traducao</strong>
+              <small data-i18n="translationHelp">Para idiomas sem pacote nativo</small>
+            </span>
+            <input id="useTranslation" type="checkbox">
+          </label>
+
+          <label class="option-row">
+            <span>
+              <strong data-i18n="sendButton">Botao de envio</strong>
+              <small data-i18n="sendButtonHelp">Usa enter como fallback</small>
+            </span>
+            <input id="sendWithButton" type="checkbox">
+          </label>
+        </section>
+      </div>
+
+      <footer class="actions">
+        <button id="sendNow" class="button secondary" type="button" data-i18n="sendNow">Enviar agora</button>
+        <button id="save" class="button primary" type="button" data-i18n="save">Salvar</button>
+      </footer>
+
+      <p id="status" class="status" role="status"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
