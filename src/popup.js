@@ -223,89 +223,9 @@ const UI_TRANSLATIONS = {
   }
 };
 
-UI_TRANSLATIONS.ja = {
-  platformDetecting: "プラットフォームを検出中...",
-  unsupportedPage: "対応しているライブ配信を開いてください。",
-  active: "このタブで有効です。",
-  paused: "一時停止中です。",
-  waitingPage: "対応ページを待機中です。",
-  sent: "メッセージを送信しました。",
-  commandSent: "ページにコマンドを送信しました。",
-  activeTabMissing: "アクティブなタブが見つかりません。",
-  platform: "プラットフォーム: {platform}",
-  uiLanguage: "インターフェース言語",
-  autoLanguage: "自動",
-  topic: "トピック",
-  topicPlaceholder: "bacon, gameplay, chat",
-  minMinutes: "最小",
-  maxMinutes: "最大",
-  messageLanguages: "メッセージ言語",
-  autoMix: "自動ミックス",
-  customCodes: "その他のコード",
-  customCodesPlaceholder: "uk, ro, da",
-  translation: "翻訳",
-  translationHelp: "ネイティブパックがない言語用",
-  sendButton: "送信ボタン",
-  sendButtonHelp: "Enter をフォールバックに使用",
-  sendNow: "今すぐ送信",
-  save: "保存"
-};
-
-UI_TRANSLATIONS.ko = {
-  platformDetecting: "플랫폼 감지 중...",
-  unsupportedPage: "지원되는 라이브 페이지를 여세요.",
-  active: "이 탭에서 활성화됨.",
-  paused: "일시 중지됨.",
-  waitingPage: "지원되는 페이지를 기다리는 중.",
-  sent: "메시지를 보냈습니다.",
-  commandSent: "페이지에 명령을 보냈습니다.",
-  activeTabMissing: "활성 탭을 찾을 수 없습니다.",
-  platform: "플랫폼: {platform}",
-  uiLanguage: "인터페이스 언어",
-  autoLanguage: "자동",
-  topic: "주제",
-  topicPlaceholder: "bacon, gameplay, chat",
-  minMinutes: "최소",
-  maxMinutes: "최대",
-  messageLanguages: "메시지 언어",
-  autoMix: "자동 믹스",
-  customCodes: "기타 코드",
-  customCodesPlaceholder: "uk, ro, da",
-  translation: "번역",
-  translationHelp: "네이티브 팩이 없는 언어용",
-  sendButton: "전송 버튼",
-  sendButtonHelp: "Enter를 대체 방식으로 사용",
-  sendNow: "지금 보내기",
-  save: "저장"
-};
-
-UI_TRANSLATIONS["zh-CN"] = {
-  platformDetecting: "正在检测平台...",
-  unsupportedPage: "请打开支持的直播页面。",
-  active: "已在此标签页启用。",
-  paused: "已暂停。",
-  waitingPage: "正在等待支持的页面。",
-  sent: "消息已发送。",
-  commandSent: "命令已发送到页面。",
-  activeTabMissing: "找不到当前活动标签页。",
-  platform: "平台: {platform}",
-  uiLanguage: "界面语言",
-  autoLanguage: "自动",
-  topic: "主题",
-  topicPlaceholder: "bacon, gameplay, chat",
-  minMinutes: "最小",
-  maxMinutes: "最大",
-  messageLanguages: "消息语言",
-  autoMix: "自动混合",
-  customCodes: "其他代码",
-  customCodesPlaceholder: "uk, ro, da",
-  translation: "翻译",
-  translationHelp: "用于没有原生短语包的语言",
-  sendButton: "发送按钮",
-  sendButtonHelp: "使用 Enter 作为备用",
-  sendNow: "立即发送",
-  save: "保存"
-};
+UI_TRANSLATIONS.ja = UI_TRANSLATIONS.en;
+UI_TRANSLATIONS.ko = UI_TRANSLATIONS.en;
+UI_TRANSLATIONS["zh-CN"] = UI_TRANSLATIONS.en;
 
 const els = {
   enabled: document.getElementById("enabled"),
@@ -540,3 +460,4 @@ els.sendNow.addEventListener("click", async () => {
 });
 
 init().catch((error) => setStatus(error.message, "danger"));
+

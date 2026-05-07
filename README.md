@@ -41,6 +41,8 @@ After editing source files, reload the extension from `chrome://extensions` and 
 
 ### Firefox
 
+ChatPulse targets Firefox `142.0` or newer.
+
 Build the Firefox development version:
 
 ```powershell
@@ -94,9 +96,6 @@ Popup UI languages:
 - `fr`
 - `de`
 - `it`
-- `ja`
-- `ko`
-- `zh-CN`
 
 Message languages:
 
@@ -163,7 +162,6 @@ scripts/package-firefox.ps1   Creates Firefox upload zip
 ChatPulse requests:
 
 - `storage`: saves user configuration locally.
-- `activeTab`: communicates with the currently active live-stream tab.
 - Host permissions for supported streaming platforms.
 - Host permissions for public translation endpoints.
 
